@@ -78,8 +78,8 @@ public class RingOfWealth extends Ring {
 	}
 
 	public String upgradeStat1(int level){
-		if (cursed && cursedKnown) level = Math.min(-1, level-3);
-		return Messages.decimalFormat("#.##", 100f * (Math.pow(1.2f, level+1)-1f)) + "%";
+		if (cursed && cursedKnown) level = Math.min(1, level+3);
+		return Messages.decimalFormat("#.##", 100f * (Math.pow(2.2f, level+1)-1f)) + "%";
 	}
 
 	private static final String TRIES_TO_DROP = "tries_to_drop";
@@ -105,7 +105,7 @@ public class RingOfWealth extends Ring {
 	}
 	
 	public static float dropChanceMultiplier( Char target ){
-		return (float)Math.pow(1.20, getBuffedBonus(target, Wealth.class));
+		return (float)Math.pow(20, getBuffedBonus(target, Wealth.class));
 	}
 	
 	public static ArrayList<Item> tryForBonusDrop(Char target, int tries ){
