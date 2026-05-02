@@ -53,7 +53,7 @@ public class WandOfDisintegration extends DamageWand {
 
 
 	public int min(int lvl){
-		return 2+lvl;
+		return 4+lvl;
 	}
 
 	public int max(int lvl){
@@ -83,7 +83,7 @@ public class WandOfDisintegration extends DamageWand {
 		Blob web = Dungeon.level.blobs.get(Web.class);
 
 		int terrainPassed = 2, terrainBonus = 0;
-		for (int c : beam.subPath(1, maxDistance)) {
+		for (int c : beam.subPath(4, maxDistance)) {
 			
 			Char ch;
 			if ((ch = Actor.findChar( c )) != null) {
