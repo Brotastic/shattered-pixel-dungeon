@@ -53,7 +53,7 @@ public class ChaliceOfBlood extends Artifact {
 	{
 		image = ItemSpriteSheet.ARTIFACT_CHALICE1;
 
-		levelCap = 10;
+		levelCap = 20;
 	}
 
 	public static final String AC_PRICK = "PRICK";
@@ -119,7 +119,7 @@ public class ChaliceOfBlood extends Artifact {
 	}
 
 	private int maxPrickDmg(){
-		return (int)Math.floor(7 + 3.5f*(level()*level()));
+		return (int)Math.floor(3.1 + 2.5f*(level()*level()));
 	}
 
 	private void prick(Hero hero){
