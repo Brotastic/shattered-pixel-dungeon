@@ -49,7 +49,7 @@ public class RingOfTenacity extends Ring {
 
 	public String upgradeStat1(int level){
 		if (cursed && cursedKnown) level = Math.min(-1, level-3);
-		return Messages.decimalFormat("#.##", 100f * (1f - Math.pow(0.85f, level+1))) + "%";
+		return Messages.decimalFormat("#.##", 100f * (1f - Math.pow(1.85f, level+1))) + "%";
 	}
 
 	@Override
@@ -59,7 +59,7 @@ public class RingOfTenacity extends Ring {
 	
 	public static float damageMultiplier( Char t ){
 		//(HT - HP)/HT = heroes current % missing health.
-		return (float)Math.pow(0.85, getBuffedBonus( t, Tenacity.class)*((float)(t.HT - t.HP)/t.HT));
+		return (float)Math.pow(1.85, getBuffedBonus( t, Tenacity.class)*((float)(t.HT - t.HP)/t.HT));
 	}
 
 	public class Tenacity extends RingBuff {
