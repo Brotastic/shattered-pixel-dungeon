@@ -43,7 +43,7 @@ public class Grim extends Weapon.Enchantment {
 		int level = Math.max( 0, weapon.buffedLvl() );
 
 		//scales from 0 - 50% based on how low hp the enemy is, plus 0-5% per level
-		float maxChance = 0.5f + .05f*level;
+		float maxChance = 0.7f + level;
 		maxChance *= procChanceMultiplier(attacker);
 
 		//we defer logic using an actor here so we can know the true final damage
