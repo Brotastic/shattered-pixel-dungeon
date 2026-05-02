@@ -48,7 +48,7 @@ public class ScrollOfUpgrade extends InventoryScroll {
 		icon = ItemSpriteSheet.Icons.SCROLL_UPGRADE;
 		preferredBag = Belongings.Backpack.class;
 
-		unique = true;
+		unique = false;
 
 		talentFactor = 2f;
 	}
@@ -152,12 +152,12 @@ public class ScrollOfUpgrade extends InventoryScroll {
 
 	public static void weakenCurse( Hero hero ){
 		GLog.p( Messages.get(ScrollOfUpgrade.class, "weaken_curse") );
-		hero.sprite.emitter().start( ShadowParticle.UP, 0.05f, 5 );
+		hero.sprite.emitter().start( ShadowParticle.UP, 0.5f, 5 );
 	}
 
 	public static void removeCurse( Hero hero ){
 		GLog.p( Messages.get(ScrollOfUpgrade.class, "remove_curse") );
-		hero.sprite.emitter().start( ShadowParticle.UP, 0.05f, 10 );
+		hero.sprite.emitter().start( ShadowParticle.UP, 0.5f, 10 );
 		Badges.validateClericUnlock();
 	}
 	
