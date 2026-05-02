@@ -103,11 +103,11 @@ public class Armor extends EquipableItem {
 		}
 		
 		public int evasionFactor(int level){
-			return Math.round((2 + level) * evasionFactor);
+			return Math.round((20 * level) * evasionFactor);
 		}
 		
 		public int defenseFactor(int level){
-			return Math.round((2 + level) * defenceFactor);
+			return Math.round((20 * level) * defenceFactor);
 		}
 	}
 	
